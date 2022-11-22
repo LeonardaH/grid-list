@@ -1,0 +1,70 @@
+@import "./mixin";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $bodyColor;
+    max-width: 80%;
+    width: 100%;
+    margin: 60px auto;
+    font-family: 'Roboto';
+
+
+    @include tablet-xs{
+        max-width: 90%;
+    }
+
+    @include mobile-s{
+        max-width: 90%;
+    }
+
+}
+
+h1, h3, h2, p, span, ul, li, a{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.centered{
+    text-align: center;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}
+
+.dropdownColor{
+    background-color: $dropdown!important;
+}
+
+#more{
+    fill: $dropdown;
+}
+
+.white{
+    fill: $whiteColor!important;
+    color: $whiteColor;
+}
+
+.visible{
+    display: block!important;
+}
+
+.author{
+    text-align: right;
+}
+
+.blue{
+    background-color: $likesDropdown!important;
+}
+
+

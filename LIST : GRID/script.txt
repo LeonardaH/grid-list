@@ -1,0 +1,55 @@
+// selecting elements
+
+const openBtn = document.querySelectorAll("[data-open]");
+const likes = document.querySelectorAll(".container__box__list__likes");
+const moreIcon = document.querySelectorAll("#more");
+const wrapper = document.getElementById("wrapper");
+
+
+moreIcon.forEach(e => {
+  e.addEventListener("click", () => {
+    e.classList.toggle("white");
+    if(wrapper.classList.contains("grid")){
+      const box = e.parentElement.parentElement;
+      box.childNodes.forEach(child => {
+        if(child.classList !== undefined){
+          if(child.classList[0] === "container__box__list__likes"){
+            console.log(child);
+              child.classList.toggle("blue");
+              child.childNodes.forEach(c => {
+                if(c.style !== undefined){
+                  c.classList.toggle("white");
+                }
+                
+              })
+          }
+        }
+      })
+    }
+    const btn = e.parentElement;
+    btn.classList.toggle("dropdownColor");
+    btn.childNodes.forEach(child => {
+      if(child.tagName === "UL"){
+        child.classList.toggle("visible");
+      }
+    })
+  });
+})
+
+
+// swtiching views
+
+const list = document.querySelector(".list");
+const grid = document.querySelector(".grid");
+const gridIcon = document.querySelector(".grid-icon")
+const listIcon = document.querySelector(".list-icon");
+
+listIcon.addEventListener("click", () => {
+  list.classList.remove("list");
+  list.classList.add("grid");
+})
+
+gridIcon.addEventListener("click", () => {
+  list.classList.remove("grid");
+  list.classList.add("list");
+})

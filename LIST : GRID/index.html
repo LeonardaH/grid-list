@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List / grid books</title>
+    <link rel="stylesheet" href="./scss/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="list" id="wrapper">
+        <header class="header">
+            <h1>Books</h1>
+            <img src="./icons/list-icon.svg" alt="view" class="list-icon">
+            <img src="./icons/grid-icon.svg" alt="view" class="grid-icon">
+        </header>
+        <main>
+            <div class="container">
+                <!-- Titles -->
+                <div class="container__titles">
+                    <h2>Title</h2>
+                    <h2>Quote</h2>
+                    <h2 class="author">Author</h2>
+                    <h2 class="centered">Cover</h2>
+                    <h2>Likes</h2>
+                </div>
+                <div class="container__titles__mobile">
+                    <h2>Title / Quote / Author</h2>
+                    <h2 class="centered">Cover</h2>
+                    <h2 class="centered">Likes</h2>
+                </div>
+
+                <!-- Boxes -->
+                <div class="container__box">
+                    <!-- Box list-->
+                    <div class="container__box__list" data-article="1">
+                        <div class="container__box__list__description">
+                            <h3>The Wizard of Oz</h3>
+                            <p class="container__box__list__description__qoute">Dorothy found herself riding easily between two of the biggest Monkeys, one of them the King himself. They had made a chair...</p>
+                            <span class="author">L. Frank Baum</span>
+                        </div>
+                        <div class="container__box__list__cover">
+                            <img src="./icons/book-cover.png" alt="book">
+                        </div>
+                        <div class="container__box__list__likes">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="16px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <span>16</span>
+                        </div>
+                        <button class="container__box__list__more" data-open="1">
+                            <svg width="14" height="4" id="more" viewBox="0 0 14 4" xmlns="http://www.w3.org/2000/svg" >
+                                <path d="M2 3.5C1.60218 3.5 1.22064 3.34196 0.93934 3.06066C0.658035 2.77936 0.5 2.39782 0.5 2C0.5 1.60218 0.658035 1.22064 0.93934 0.93934C1.22064 0.658035 1.60218 0.5 2 0.5C2.39782 0.5 2.77936 0.658035 3.06066 0.93934C3.34196 1.22064 3.5 1.60218 3.5 2C3.5 2.39782 3.34196 2.77936 3.06066 3.06066C2.77936 3.34196 2.39782 3.5 2 3.5ZM7 3.5C6.60218 3.5 6.22064 3.34196 5.93934 3.06066C5.65804 2.77936 5.5 2.39782 5.5 2C5.5 1.60218 5.65804 1.22064 5.93934 0.93934C6.22064 0.658035 6.60218 0.5 7 0.5C7.39782 0.5 7.77936 0.658035 8.06066 0.93934C8.34196 1.22064 8.5 1.60218 8.5 2C8.5 2.39782 8.34196 2.77936 8.06066 3.06066C7.77936 3.34196 7.39782 3.5 7 3.5ZM12 3.5C11.6022 3.5 11.2206 3.34196 10.9393 3.06066C10.658 2.77936 10.5 2.39782 10.5 2C10.5 1.60218 10.658 1.22064 10.9393 0.93934C11.2206 0.658035 11.6022 0.5 12 0.5C12.3978 0.5 12.7794 0.658035 13.0607 0.93934C13.342 1.22064 13.5 1.60218 13.5 2C13.5 2.39782 13.342 2.77936 13.0607 3.06066C12.7794 3.34196 12.3978 3.5 12 3.5Z" />
+                            </svg>
+                            <ul class="container__box__list__more__dropdown" data-dropdown="1">
+                                <li>
+                                    <a href="#">Edit book details</a>
+                                </li>
+                                <li>
+                                    <a href="#">Duplicate book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Move book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Delete book<span>Delete this book permanently</span></a>
+                                </li>
+                            </ul>  
+                        </button>
+                    </div>
+                    
+                    <!-- Box list-->
+                    <div class="container__box__list" data-article="2">
+                        <div class="container__box__list__description">
+                            <h3>Mobi Dick</h3>
+                            <p class="container__box__list__description__qoute">Round the world! There is much in that sound to inspire proud feelings; but where to does all that circunavigation conduct?...</p>
+                            <span class="author">Herman Melville</span>
+                        </div>
+                        <div class="container__box__list__cover">
+                            <img src="./icons/book-cover.png" alt="book">
+                        </div>
+                        <div class="container__box__list__likes">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="16px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <span>28</span>
+                        </div>
+                        <button class="container__box__list__more" data-open="2">
+                            <svg width="14" height="4" id="more" viewBox="0 0 14 4" xmlns="http://www.w3.org/2000/svg" >
+                                <path d="M2 3.5C1.60218 3.5 1.22064 3.34196 0.93934 3.06066C0.658035 2.77936 0.5 2.39782 0.5 2C0.5 1.60218 0.658035 1.22064 0.93934 0.93934C1.22064 0.658035 1.60218 0.5 2 0.5C2.39782 0.5 2.77936 0.658035 3.06066 0.93934C3.34196 1.22064 3.5 1.60218 3.5 2C3.5 2.39782 3.34196 2.77936 3.06066 3.06066C2.77936 3.34196 2.39782 3.5 2 3.5ZM7 3.5C6.60218 3.5 6.22064 3.34196 5.93934 3.06066C5.65804 2.77936 5.5 2.39782 5.5 2C5.5 1.60218 5.65804 1.22064 5.93934 0.93934C6.22064 0.658035 6.60218 0.5 7 0.5C7.39782 0.5 7.77936 0.658035 8.06066 0.93934C8.34196 1.22064 8.5 1.60218 8.5 2C8.5 2.39782 8.34196 2.77936 8.06066 3.06066C7.77936 3.34196 7.39782 3.5 7 3.5ZM12 3.5C11.6022 3.5 11.2206 3.34196 10.9393 3.06066C10.658 2.77936 10.5 2.39782 10.5 2C10.5 1.60218 10.658 1.22064 10.9393 0.93934C11.2206 0.658035 11.6022 0.5 12 0.5C12.3978 0.5 12.7794 0.658035 13.0607 0.93934C13.342 1.22064 13.5 1.60218 13.5 2C13.5 2.39782 13.342 2.77936 13.0607 3.06066C12.7794 3.34196 12.3978 3.5 12 3.5Z" />
+                            </svg>  
+                            <ul class="container__box__list__more__dropdown" data-dropdown="2">
+                                <li>
+                                    <a href="#">Edit book details</a>
+                                </li>
+                                <li>
+                                    <a href="#">Duplicate book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Move book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Delete book<span>Delete this book permanently</span></a>
+                                </li>
+                            </ul>
+                        </button>
+                    </div>
+                    
+                    <!-- Box list-->
+                    <div class="container__box__list" data-article="3">
+                        <div class="container__box__list__description">
+                            <h3>The War of the Worlds</h3>
+                            <p class="container__box__list__description__qoute">"What news from the common?" I said: "People seem fair silly about the common," said the woman over the gate.</p>
+                            <span class="author">H. G. Wells</span>
+                        </div>
+                        <div class="container__box__list__cover">
+                            <img src="./icons/book-cover.png" alt="book">
+                        </div>
+                        <div class="container__box__list__likes">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="16px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <span>19</span>
+                        </div>
+                        <button class="container__box__list__more" data-open="3">
+                            <svg width="14" height="4" id="more" viewBox="0 0 14 4" xmlns="http://www.w3.org/2000/svg" >
+                                <path d="M2 3.5C1.60218 3.5 1.22064 3.34196 0.93934 3.06066C0.658035 2.77936 0.5 2.39782 0.5 2C0.5 1.60218 0.658035 1.22064 0.93934 0.93934C1.22064 0.658035 1.60218 0.5 2 0.5C2.39782 0.5 2.77936 0.658035 3.06066 0.93934C3.34196 1.22064 3.5 1.60218 3.5 2C3.5 2.39782 3.34196 2.77936 3.06066 3.06066C2.77936 3.34196 2.39782 3.5 2 3.5ZM7 3.5C6.60218 3.5 6.22064 3.34196 5.93934 3.06066C5.65804 2.77936 5.5 2.39782 5.5 2C5.5 1.60218 5.65804 1.22064 5.93934 0.93934C6.22064 0.658035 6.60218 0.5 7 0.5C7.39782 0.5 7.77936 0.658035 8.06066 0.93934C8.34196 1.22064 8.5 1.60218 8.5 2C8.5 2.39782 8.34196 2.77936 8.06066 3.06066C7.77936 3.34196 7.39782 3.5 7 3.5ZM12 3.5C11.6022 3.5 11.2206 3.34196 10.9393 3.06066C10.658 2.77936 10.5 2.39782 10.5 2C10.5 1.60218 10.658 1.22064 10.9393 0.93934C11.2206 0.658035 11.6022 0.5 12 0.5C12.3978 0.5 12.7794 0.658035 13.0607 0.93934C13.342 1.22064 13.5 1.60218 13.5 2C13.5 2.39782 13.342 2.77936 13.0607 3.06066C12.7794 3.34196 12.3978 3.5 12 3.5Z" />
+                            </svg>      
+                            <ul class="container__box__list__more__dropdown" data-dropdown="3">
+                                <li>
+                                    <a href="#">Edit book details</a>
+                                </li>
+                                <li>
+                                    <a href="#">Duplicate book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Move book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Delete book<span>Delete this book permanently</span></a>
+                                </li>
+                            </ul>
+                        </button>
+                    </div>
+                    
+                    <!-- Box list-->
+                    <div class="container__box__list" data-article="4">
+                        <div class="container__box__list__description">
+                            <h3>At the Earth's Core</h3>
+                            <p class="container__box__list__description__qoute">I wondered why these agile creatures required connecting bridges between the trees, but later when I saw the motley...</p>
+                            <span class="author">Edgar Rice Burroughs</span>
+                        </div>
+                        <div class="container__box__list__cover">
+                            <img src="./icons/book-cover.png" alt="book">
+                        </div>
+                        <div class="container__box__list__likes">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="16px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <span>8</span>
+                        </div>
+                        <button class="container__box__list__more" data-open="4">
+                            <svg width="14" height="4" id="more" viewBox="0 0 14 4" xmlns="http://www.w3.org/2000/svg" cl >
+                                <path d="M2 3.5C1.60218 3.5 1.22064 3.34196 0.93934 3.06066C0.658035 2.77936 0.5 2.39782 0.5 2C0.5 1.60218 0.658035 1.22064 0.93934 0.93934C1.22064 0.658035 1.60218 0.5 2 0.5C2.39782 0.5 2.77936 0.658035 3.06066 0.93934C3.34196 1.22064 3.5 1.60218 3.5 2C3.5 2.39782 3.34196 2.77936 3.06066 3.06066C2.77936 3.34196 2.39782 3.5 2 3.5ZM7 3.5C6.60218 3.5 6.22064 3.34196 5.93934 3.06066C5.65804 2.77936 5.5 2.39782 5.5 2C5.5 1.60218 5.65804 1.22064 5.93934 0.93934C6.22064 0.658035 6.60218 0.5 7 0.5C7.39782 0.5 7.77936 0.658035 8.06066 0.93934C8.34196 1.22064 8.5 1.60218 8.5 2C8.5 2.39782 8.34196 2.77936 8.06066 3.06066C7.77936 3.34196 7.39782 3.5 7 3.5ZM12 3.5C11.6022 3.5 11.2206 3.34196 10.9393 3.06066C10.658 2.77936 10.5 2.39782 10.5 2C10.5 1.60218 10.658 1.22064 10.9393 0.93934C11.2206 0.658035 11.6022 0.5 12 0.5C12.3978 0.5 12.7794 0.658035 13.0607 0.93934C13.342 1.22064 13.5 1.60218 13.5 2C13.5 2.39782 13.342 2.77936 13.0607 3.06066C12.7794 3.34196 12.3978 3.5 12 3.5Z" />
+                            </svg>  
+                            <ul class="container__box__list__more__dropdown" data-dropdown="4">
+                                <li>
+                                    <a href="#">Edit book details</a>
+                                </li>
+                                <li>
+                                    <a href="#">Duplicate book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Move book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Delete book<span>Delete this book permanently</span></a>
+                                </li>
+                            </ul>
+                        </button>
+                    </div>
+                    
+                    <!-- Box list -->
+                    <div class="container__box__list" data-article="5">
+                        <div class="container__box__list__description">
+                            <h3>A Princess of Mars</h3>
+                            <p class="container__box__list__description__qoute">I drew rein on a little level promontory overlooking the trail bellow and to my left, and saw the party of pursuing savages...</p>
+                            <span class="author">Edgar Rice Burroughs</span>
+                        </div>
+                        <div class="container__box__list__cover">
+                            <img src="./icons/book-cover.png" alt="book">
+                        </div>
+                        <div class="container__box__list__likes">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="16px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <span>11</span>
+                        </div>
+                        <button class="container__box__list__more" data-open="5">
+                            <svg width="14" height="4" id="more" viewBox="0 0 14 4" xmlns="http://www.w3.org/2000/svg" >
+                                <path d="M2 3.5C1.60218 3.5 1.22064 3.34196 0.93934 3.06066C0.658035 2.77936 0.5 2.39782 0.5 2C0.5 1.60218 0.658035 1.22064 0.93934 0.93934C1.22064 0.658035 1.60218 0.5 2 0.5C2.39782 0.5 2.77936 0.658035 3.06066 0.93934C3.34196 1.22064 3.5 1.60218 3.5 2C3.5 2.39782 3.34196 2.77936 3.06066 3.06066C2.77936 3.34196 2.39782 3.5 2 3.5ZM7 3.5C6.60218 3.5 6.22064 3.34196 5.93934 3.06066C5.65804 2.77936 5.5 2.39782 5.5 2C5.5 1.60218 5.65804 1.22064 5.93934 0.93934C6.22064 0.658035 6.60218 0.5 7 0.5C7.39782 0.5 7.77936 0.658035 8.06066 0.93934C8.34196 1.22064 8.5 1.60218 8.5 2C8.5 2.39782 8.34196 2.77936 8.06066 3.06066C7.77936 3.34196 7.39782 3.5 7 3.5ZM12 3.5C11.6022 3.5 11.2206 3.34196 10.9393 3.06066C10.658 2.77936 10.5 2.39782 10.5 2C10.5 1.60218 10.658 1.22064 10.9393 0.93934C11.2206 0.658035 11.6022 0.5 12 0.5C12.3978 0.5 12.7794 0.658035 13.0607 0.93934C13.342 1.22064 13.5 1.60218 13.5 2C13.5 2.39782 13.342 2.77936 13.0607 3.06066C12.7794 3.34196 12.3978 3.5 12 3.5Z" />
+                            </svg>  
+                            <ul class="container__box__list__more__dropdown" data-dropdown="5">
+                                <li>
+                                    <a href="#">Edit book details</a>
+                                </li>
+                                <li>
+                                    <a href="#">Duplicate book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Move book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Delete book<span>Delete this book permanently</span></a>
+                                </li>
+                            </ul>
+                        </button>
+                    </div>
+                    
+                    <!-- Box list -->
+                    <div class="container__box__list" data-article="6">
+                        <div class="container__box__list__description">
+                            <h3>Alice in Wonderland</h3>
+                            <p class="container__box__list__description__qoute">The Hatter shook his head mournfully. 'Not I!' he replied.'We quarrelled last March-just before HE went mad, you know-'</p>
+                            <span class="author">Lewis Carroll</span>
+                        </div>
+                        <div class="container__box__list__cover">
+                            <img src="./icons/book-cover.png" alt="book">
+                        </div>
+                        <div class="container__box__list__likes">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="16px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <span>21</span>
+                        </div>
+                        <button class="container__box__list__more" data-open="6">
+                            <svg width="14" height="4" id="more" viewBox="0 0 14 4" xmlns="http://www.w3.org/2000/svg" >
+                                <path d="M2 3.5C1.60218 3.5 1.22064 3.34196 0.93934 3.06066C0.658035 2.77936 0.5 2.39782 0.5 2C0.5 1.60218 0.658035 1.22064 0.93934 0.93934C1.22064 0.658035 1.60218 0.5 2 0.5C2.39782 0.5 2.77936 0.658035 3.06066 0.93934C3.34196 1.22064 3.5 1.60218 3.5 2C3.5 2.39782 3.34196 2.77936 3.06066 3.06066C2.77936 3.34196 2.39782 3.5 2 3.5ZM7 3.5C6.60218 3.5 6.22064 3.34196 5.93934 3.06066C5.65804 2.77936 5.5 2.39782 5.5 2C5.5 1.60218 5.65804 1.22064 5.93934 0.93934C6.22064 0.658035 6.60218 0.5 7 0.5C7.39782 0.5 7.77936 0.658035 8.06066 0.93934C8.34196 1.22064 8.5 1.60218 8.5 2C8.5 2.39782 8.34196 2.77936 8.06066 3.06066C7.77936 3.34196 7.39782 3.5 7 3.5ZM12 3.5C11.6022 3.5 11.2206 3.34196 10.9393 3.06066C10.658 2.77936 10.5 2.39782 10.5 2C10.5 1.60218 10.658 1.22064 10.9393 0.93934C11.2206 0.658035 11.6022 0.5 12 0.5C12.3978 0.5 12.7794 0.658035 13.0607 0.93934C13.342 1.22064 13.5 1.60218 13.5 2C13.5 2.39782 13.342 2.77936 13.0607 3.06066C12.7794 3.34196 12.3978 3.5 12 3.5Z" />
+                            </svg>  
+                            <ul class="container__box__list__more__dropdown" data-dropdown="6">
+                                <li>
+                                    <a href="#">Edit book details</a>
+                                </li>
+                                <li>
+                                    <a href="#">Duplicate book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Move book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Delete book<span>Delete this book permanently</span></a>
+                                </li>
+                            </ul>
+                        </button>
+                    </div>
+                    
+                    <!-- Box list -->
+                    <div class="container__box__list" data-article="7">
+                        <div class="container__box__list__description">
+                            <h3>The Scarlet Plague</h3>
+                            <p class="container__box__list__description__qoute">It was at this point that Hare-Lip rose to his feet, an expression of huge contempt on his face. "Granser", he announced, "you make...</p>
+                            <span class="author">Jack London</span>
+                        </div>
+                        <div class="container__box__list__cover">
+                            <img src="./icons/book-cover.png" alt="book">
+                        </div>
+                        <div class="container__box__list__likes">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="16px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <span>13</span>
+                        </div>
+                        <button class="container__box__list__more" data-open="7">
+                            <svg width="14" height="4" id="more" viewBox="0 0 14 4" xmlns="http://www.w3.org/2000/svg" >
+                                <path d="M2 3.5C1.60218 3.5 1.22064 3.34196 0.93934 3.06066C0.658035 2.77936 0.5 2.39782 0.5 2C0.5 1.60218 0.658035 1.22064 0.93934 0.93934C1.22064 0.658035 1.60218 0.5 2 0.5C2.39782 0.5 2.77936 0.658035 3.06066 0.93934C3.34196 1.22064 3.5 1.60218 3.5 2C3.5 2.39782 3.34196 2.77936 3.06066 3.06066C2.77936 3.34196 2.39782 3.5 2 3.5ZM7 3.5C6.60218 3.5 6.22064 3.34196 5.93934 3.06066C5.65804 2.77936 5.5 2.39782 5.5 2C5.5 1.60218 5.65804 1.22064 5.93934 0.93934C6.22064 0.658035 6.60218 0.5 7 0.5C7.39782 0.5 7.77936 0.658035 8.06066 0.93934C8.34196 1.22064 8.5 1.60218 8.5 2C8.5 2.39782 8.34196 2.77936 8.06066 3.06066C7.77936 3.34196 7.39782 3.5 7 3.5ZM12 3.5C11.6022 3.5 11.2206 3.34196 10.9393 3.06066C10.658 2.77936 10.5 2.39782 10.5 2C10.5 1.60218 10.658 1.22064 10.9393 0.93934C11.2206 0.658035 11.6022 0.5 12 0.5C12.3978 0.5 12.7794 0.658035 13.0607 0.93934C13.342 1.22064 13.5 1.60218 13.5 2C13.5 2.39782 13.342 2.77936 13.0607 3.06066C12.7794 3.34196 12.3978 3.5 12 3.5Z" />
+                            </svg>  
+                            <ul class="container__box__list__more__dropdown" data-dropdown="7">
+                                <li>
+                                    <a href="#">Edit book details</a>
+                                </li>
+                                <li>
+                                    <a href="#">Duplicate book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Move book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Delete book<span>Delete this book permanently</span></a>
+                                </li>
+                            </ul>
+                        </button>
+                    </div> 
+                    
+                    <!-- Box list -->
+                    <div class="container__box__list" data-article="8">
+                        <div class="container__box__list__description">
+                            <h3>Around the World in 80</h3>
+                            <p class="container__box__list__description__qoute">Nothing could be more simple. Indeed, it was all so simple that Fix and Passepartout felt their hearts beating as if they would...</p>
+                            <span class="author">Jules Verne</span>
+                        </div>
+                        <div class="container__box__list__cover">
+                            <img src="./icons/book-cover.png" alt="book">
+                        </div> 
+                        <div class="container__box__list__likes">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="16px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <span>18</span>
+                        </div>
+                        <button class="container__box__list__more" data-open="8">
+                            <svg width="14" height="4" id="more" viewBox="0 0 14 4" xmlns="http://www.w3.org/2000/svg" >
+                                <path d="M2 3.5C1.60218 3.5 1.22064 3.34196 0.93934 3.06066C0.658035 2.77936 0.5 2.39782 0.5 2C0.5 1.60218 0.658035 1.22064 0.93934 0.93934C1.22064 0.658035 1.60218 0.5 2 0.5C2.39782 0.5 2.77936 0.658035 3.06066 0.93934C3.34196 1.22064 3.5 1.60218 3.5 2C3.5 2.39782 3.34196 2.77936 3.06066 3.06066C2.77936 3.34196 2.39782 3.5 2 3.5ZM7 3.5C6.60218 3.5 6.22064 3.34196 5.93934 3.06066C5.65804 2.77936 5.5 2.39782 5.5 2C5.5 1.60218 5.65804 1.22064 5.93934 0.93934C6.22064 0.658035 6.60218 0.5 7 0.5C7.39782 0.5 7.77936 0.658035 8.06066 0.93934C8.34196 1.22064 8.5 1.60218 8.5 2C8.5 2.39782 8.34196 2.77936 8.06066 3.06066C7.77936 3.34196 7.39782 3.5 7 3.5ZM12 3.5C11.6022 3.5 11.2206 3.34196 10.9393 3.06066C10.658 2.77936 10.5 2.39782 10.5 2C10.5 1.60218 10.658 1.22064 10.9393 0.93934C11.2206 0.658035 11.6022 0.5 12 0.5C12.3978 0.5 12.7794 0.658035 13.0607 0.93934C13.342 1.22064 13.5 1.60218 13.5 2C13.5 2.39782 13.342 2.77936 13.0607 3.06066C12.7794 3.34196 12.3978 3.5 12 3.5Z" />
+                            </svg>  
+                            <ul class="container__box__list__more__dropdown" data-dropdown="8">
+                                <li>
+                                    <a href="#">Edit book details</a>
+                                </li>
+                                <li>
+                                    <a href="#">Duplicate book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Move book</a>
+                                </li>
+                                <li>
+                                    <a href="#">Delete book<span>Delete this book permanently</span></a>
+                                </li>
+                            </ul>
+                        </button>
+                    </div>            
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.txt"></script>
+</body>
+</html>
